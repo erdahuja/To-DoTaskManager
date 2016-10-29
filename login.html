@@ -1,0 +1,400 @@
+<!-- created by Pranshu jaguri-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>ToDo TASK MANAGER</title> 
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+
+<!-- Theme CSS -->
+<!--<link href="css/freelancer.min.css" rel="stylesheet">-->
+<link href="css/Resume.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!-- other css-->
+
+
+
+<!--  other css-->
+<!-- Custom Fonts -->
+<!--<link rel=”stylesheet” id=”font-awesome-css” href=”//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css” type=”text/css” media=”screen”>-->
+
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<!--<link href="css/custom.css" rel="stylesheet" type="text/css">-->
+<script src="js/jquery-1.12.3.min.js"></script>
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>-->
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/resume.js"></script>-->
+<script type="text/javascript" src="js/login.js"></script>
+
+</head>
+<style>
+
+    body {
+        overflow-x: hidden !important;
+    }
+ 
+
+
+#preloader {
+     float: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+   
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+    width:500px;
+    height:500px;
+    position:absolute;
+    left:40%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(../TaskManagerApp/images/01-progress.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+   
+    .container{
+        text-align: center;
+    }  
+    .thead{
+        background-color: darkslategray;
+    }
+   
+    .row{
+       /* padding-top: 30px;*/
+        
+    }
+   .service a {
+        display: block;
+        padding: 10px;
+    }    
+   
+    .a{
+      text-align: center; 
+        
+    }
+    .navbar-brand, .navbar-header {
+        float: none;
+    }
+        li{
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #disabledTextInput{
+         margin-right: 10px;
+       /* width: auto;*/
+    }
+    #compose-button{
+            background-color: white;
+    color: #18bc9c;
+    }
+   
+    .deactive {
+        display:none;
+    
+}
+  
+    .navbar-brand{
+       
+    margin-left: 80px;
+
+    }
+   
+    .modal-footer {
+    
+    text-align: center;
+    }
+    #close{
+        background-color: #00BCD4;
+    }
+    .navbar-custom{
+        background-color: #044b52;
+    }
+    .footer-below{
+        background-color: #044b52; !important
+    }
+    #row1{
+        margin-right: 0px; 
+    margin-left: -50px; 
+    }
+     .map {
+      /*  margin-top: 5px;*/
+        min-width: 300px;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+		 
+    }
+	#banner img {
+    width: 100%;
+    position: absolute;
+ }
+	
+	
+.head {
+    max-height: 178px;
+      vertical-align: middle;
+    max-width: 234px;
+	    border-radius: 90px;
+
+	}
+	
+.imagesize img {
+    max-height: 100%;
+    max-width: 100%;
+	}
+	/*.one{
+		z-index: -1;
+	}*/
+	.jumbotron{
+		    margin-top: 10px;
+    margin-left: 4px;
+	}
+	.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 43px;
+    font-weight: 200;
+}
+	.raw{
+		margin-left: 608px;
+    margin-top: 295px;
+    margin-bottom: 300px;
+	}
+
+ </style>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".username").focus(function() {
+		$(".user-icon").css("left","-48px");
+	});
+	$(".user-icon").focusin(function() {
+		$(".user-icon").css("left","-48px");
+	});
+	$(".user-icon").focusout(function() {
+		$(".user-icon").css("left","-48px");
+	});
+	$(".username").blur(function() {
+		$(".user-icon").css("left","0px");
+	});
+	
+	$(".password").focus(function() {
+		$(".pass-icon").css("left","-48px");
+	});
+	$(".password").blur(function() {
+		$(".pass-icon").css("left","0px");
+	});
+});
+	</script>
+<!-- jQuery Plugin -->
+
+
+<script>
+   //<![CDATA[
+        $(window).load(function() { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(30000).css({'overflow':'visible'});
+        });
+    
+ 
+</script>
+<!-- Preloader -->
+
+
+<!--<body id="page-top" class="index" >
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>-->
+  
+  
+   
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <form class="form-inline">
+  
+  <div class="form-group ">
+   
+   <div class="head">
+    <div class="flip">
+<div class="flip_front">
+    <img  class="head"src="Images/images%20(5).jpg" >         
+       </div>
+        <div class="flip_back">
+    <img class="head" src="Images/images%20(5).jpg"  >
+        </div>
+     </div>
+</div>
+   
+
+  </div>
+ 
+ </form>
+            <div class="navbar-header page-scroll" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand"  href="index.html" >ToDo TASK MANAGER</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                   
+                  </ul>
+                 <ul class="nav navbar-nav navbar-right" id="bs-example-navbar-collapse-1">
+                  <li class="page-scroll">
+                    <a href="index.html" class="btn btn-primary btn-lg">Home !</a>
+
+                    </li>
+                    <li class="page-scroll">
+                        <a href="features.html">FEATURES</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="about%20it.html">ABOUT IT</a>
+                    </li>
+                 
+          </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            </div>
+        <div>
+        </div>
+        <!-- /.container-fluid -->
+    
+    </nav>
+    
+    
+      <main class="raw"><!--WRAPPER-->
+<div id="wrapper">
+
+	<!--SLIDE-IN ICONS-->
+    <div class="user-icon"></div>
+    <div class="pass-icon"></div>
+    <!--END SLIDE-IN ICONS pass-icon -->
+
+<!--LOGIN FORM-->
+<form class="login-form" method="post" name="myform" onsubmit="return validate();">
+	<!--HEADER-->
+    <div class="header loginheader">
+    <!--TITLE--><h1>---: Login :---</h1><!--END TITLE-->
+    <!--DESCRIPTION--><span>Task Manager</span><!--END DESCRIPTION-->
+    </div>
+    <!--END HEADER-->
+	
+	<!--CONTENT-->
+    <div class="content">
+	<!--USERNAME--><input name="user" id="username" type="email" class="input username" placeholder="Email" required="required" onfocus="this.value=''"/><!--END USERNAME-->
+    <!--PASSWORD--><input name="password" id="password" type="password" class="input password" required="required" placeholder="Password" onfocus="this.value=''" /><!--END PASSWORD-->
+    </div>
+    <!--END CONTENT-->
+    
+    <!--FOOTER-->
+    <div class="footer loginbutton">
+    <!--LOGIN BUTTON--><input type="submit" value="Login" id="submit" onclick="validate()" class="button"/><!--END LOGIN BUTTON-->
+    </div>
+    <!--END FOOTER-->
+
+</form>
+<!--END LOGIN FORM-->
+
+</div>
+<div id="div1"></div>
+<!--END WRAPPER--></main>
+   
+ <!--<header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 imagesize">
+                <div class="jumbotron jumbotron-fluid">
+                <img class="" src="Images/new.jpg" alt="banner">
+  
+   <hr class="my-2">
+  <p>Your LightWeight Task Manager</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="login.html" role="button">Learn more</a>
+  </p>
+    					</div>
+                    </div>
+                </div>
+            </div>
+       
+        </header> -->
+        
+   
+     
+<!-- footer -->
+<footer   id="foot " class="text-center">
+         <div  id="foot1"class="footer-above " >
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>YOUR,
+                            <br>ADDRESS</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/?__req=s" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/collections/" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/pranshujaguri" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://in.linkedin.com/in/pranshu-jaguri-97357b72" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <div id="map1" class="map">
+                        </div>
+                        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/map.js" type="application/javascript"></script>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+       
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; ToDo TASK MANAGER 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+	
+    
+    </body>
+    
+</html>

@@ -1,0 +1,60 @@
+.head{
+    background-image: url("../images/who%20we%20are.jpg");
+    min-height: 600px;
+    background-size: cover;
+}
+.about-back{
+    margin-top: 55px;
+    /*background: rgba(237, 237, 9,0.5);*/
+    min-height: 600px;
+}
+.about-intro{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    font-size: 2.1em;
+    color: crimson;
+}
+.tag1{
+    margin-top: 165px;
+    margin-left: 100px;
+    width: 670px;
+    text-align: left;
+}
+.tag2{
+    width: 800px;
+    margin-top: 30px;
+    text-align: right;
+}
+.mission-back{
+    background-image: url("../images/corporate-learning.jpg");
+    min-height: 650px;
+    background-size: cover;
+ }
+.mission-main{
+    background: rgba(213, 0, 249,0.3);
+    min-height: 650px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+.mission-content{
+    margin-top: 15px;
+    margin-left: 50px;
+    font-size:2.2em;
+    color: #ffffff;
+}
+.mission-tag1{
+    margin-top: 30px;
+    width: 600px;
+}
+.mission-tag2{
+    margin-top: 30px;
+    width: 550px;
+    text-align: right;
+}
+.mission-tag3{
+    width: 750px;
+    text-align: right;
+}
