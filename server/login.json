@@ -1,4 +1,9 @@
 	{
+<<<<<<< Updated upstream
         "username": "akhilgupta@gmail.com",
         "password": "akhil1234"
+=======
+	    "username": "akhilgupta@gmail.com",
+	    "password": "akhil1234"
+>>>>>>> Stashed changes
 	}
