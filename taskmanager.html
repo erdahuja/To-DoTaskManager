@@ -178,18 +178,6 @@
             font-weight: 200;
         }
         
-        #mike {
-            font-size: 25px;
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
-            border: none;
-            position: absolute;
-            margin-left: 5px;
-            outline: none;
-            background: transparent;
-        }
-        
         #taskDesc {
             height: 150px;
             width: 150px;
@@ -318,16 +306,17 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body col-lg-offset-4">
-                                    <table>
+                                    <table class="table">
                                         <tr>
                                             <td>
                                                 <label for="">Description</label>
                                             </td>
                                             <td>
 
-                                                <textarea id="taskDesc" cols="30" rows="10" placeholder="Provide Task Description"></textarea>
+                                                <textarea id="taskDesc" rows="5" placeholder="Provide Task Description">
+                                                </textarea>
 
-                                                <input type="text" id="mike" class="speech-input">
+
                                             </td>
                                         </tr>
                                     </table>
@@ -425,9 +414,9 @@
                                         <td>
                                             <label for="searchTask">Search</label>
                                         </td>
-                                        <td>
-                                            <input type="text" id="searchTask" class=" speech-input tableinput" placeholder="Type TaskName to Search">
-                                        </td>
+
+                                        <input type="text" id="searchTask" class=" speech-input tableinput" placeholder="Type TaskName to Search">
+
                                     </div>
                                     <h1 class="customcoler">Pending Count <bold><span id="pending"></span></bold> Completed Count <bold><span id="completed"></span></bold></h1>
                                     <fieldset>
@@ -502,14 +491,6 @@
 </body>
 <script src="speech-input.js"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-<script>
-    var mike = document.getElementById('mike');
-    mike.onfocus = mike.blur;
-    mike.onwebkitspeechchange = function(e) {
-        //console.log(e); // SpeechInputEvent
-        document.getElementById('taskDesc').value = mike.value;
-    };
 
-</script>
 
 </html>
