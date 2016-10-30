@@ -19,7 +19,7 @@
     <!--<link href="css/freelancer.min.css" rel="stylesheet">-->
     <link href="css/Resume.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="speech-input.css">
     <!-- other css-->
 
 
@@ -177,6 +177,23 @@
             font-size: 43px;
             font-weight: 200;
         }
+        
+        #mike {
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            border: none;
+            position: absolute;
+            margin-left: 5px;
+            outline: none;
+            background: transparent;
+        }
+        
+        #taskDesc {
+            height: 150px;
+            width: 150px;
+        }
 
     </style>
 
@@ -286,7 +303,7 @@
                                         <label for="taskName">Name</label>
                                     </td>
                                     <td>
-                                        <input id="taskName" class="tableinput" type="text" placeholder="Type TaskName">
+                                        <input id="taskName" class="speech-input tableinput" type="text" placeholder="Type TaskName">
                                     </td>
                                 </div>
                             </div>
@@ -307,7 +324,10 @@
                                                 <label for="">Description</label>
                                             </td>
                                             <td>
+
                                                 <textarea id="taskDesc" cols="30" rows="10" placeholder="Provide Task Description"></textarea>
+
+                                                <input type="text" id="mike" class="speech-input">
                                             </td>
                                         </tr>
                                     </table>
@@ -328,7 +348,7 @@
                                         <label for="duedate">Due Date</label>
                                     </td>
                                     <td>
-                                        <input id="duedate" type="date" class="tableinput" placeholder="Task Due Date">
+                                        <input id="duedate" type="date" class="speech-input tableinput" placeholder="Task Due Date">
                                     </td>
 
                                 </div>
@@ -347,43 +367,48 @@
 
 
                                 <tr>
-                                    <td class="tabletd">
-                                        <button id="addBt" class="btn btn-success">
-                                            Add
-                                        </button>
+                                    <td colspan="2">
+
+                                        <tr>
+                                            <td class="tabletd">
+                                                <button id="addBt" class="btn btn-success">
+                                                    Add
+                                                </button>
+                                            </td>
+                                            <td class="tabletd">
+                                                <button id="deleteBt" class="btn btn-danger">
+                                                    Delete
+                                                </button>
+                                            </td>
+                                            <td class="tabletd">
+                                                <button id="searchBt" class="btn btn-success">
+                                                    Search
+                                                </button>
+                                            </td>
+                                            <td class="tabletd">
+                                                <button id="sortBt" class="btn btn-success">
+                                                    Sort
+                                                </button>
+                                            </td>
+                                            <td class="tabletd">
+                                                <button id="save" class="btn btn-success">
+                                                    Save
+                                                </button>
+                                            </td>
+                                            <td class="tabletd">
+                                                <button id="loadLocal" class="btn btn-success">
+                                                    Load
+                                                </button>
+                                            </td>
+                                        </tr>
+
                                     </td>
-                                    <td class="tabletd">
-                                        <button id="deleteBt" class="btn btn-danger">
-                                            Delete
-                                        </button>
-                                    </td>
-                                    <td class="tabletd">
-                                        <button id="searchBt" class="btn btn-success">
-                                            Search
-                                        </button>
-                                    </td>
-                                    <td class="tabletd">
-                                        <button id="sortBt" class="btn btn-success">
-                                            Sort
-                                        </button>
-                                    </td>
-                                    <td class="tabletd">
-                                        <button id="save" class="btn btn-success">
-                                            Save
-                                        </button>
-                                    </td>
-                                    <td class="tabletd">
-                                        <button id="loadLocal" class="btn btn-success">
-                                            Load
-                                        </button>
-                                    </td>
+
                                 </tr>
 
 
 
-
                             </div>
-
 
                         </div>
                         <div class="panel panel-default">
@@ -401,7 +426,7 @@
                                             <label for="searchTask">Search</label>
                                         </td>
                                         <td>
-                                            <input type="text" id="searchTask" class="tableinput" placeholder="Type TaskName to Search">
+                                            <input type="text" id="searchTask" class=" speech-input tableinput" placeholder="Type TaskName to Search">
                                         </td>
                                     </div>
                                     <h1 class="customcoler">Pending Count <bold><span id="pending"></span></bold> Completed Count <bold><span id="completed"></span></bold></h1>
@@ -443,7 +468,7 @@
                                 <a href="https://plus.google.com/collections/" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/pranshujaguri" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="https://twitter.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
                             <li>
                                 <a href="https://in.linkedin.com/in/" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
@@ -475,5 +500,16 @@
 
 
 </body>
+<script src="speech-input.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script>
+    var mike = document.getElementById('mike');
+    mike.onfocus = mike.blur;
+    mike.onwebkitspeechchange = function(e) {
+        //console.log(e); // SpeechInputEvent
+        document.getElementById('taskDesc').value = mike.value;
+    };
+
+</script>
 
 </html>

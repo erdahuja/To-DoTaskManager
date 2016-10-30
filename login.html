@@ -240,112 +240,112 @@
     <div id="status">&nbsp;</div>
 </div>-->
 
+<body>
 
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <form class="form-inline">
 
-<nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top navbar-custom">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <form class="form-inline">
+                <div class="form-group ">
 
-            <div class="form-group ">
-
-                <div class="head">
-                    <div class="flip">
-                        <div class="flip_front">
-                            <img class="head" src="Images/images%20(5).jpg">
-                        </div>
-                        <div class="flip_back">
-                            <img class="head" src="Images/images%20(5).jpg">
+                    <div class="head">
+                        <div class="flip">
+                            <div class="flip_front">
+                                <img class="head" src="Images/images%20(5).jpg">
+                            </div>
+                            <div class="flip_back">
+                                <img class="head" src="Images/images%20(5).jpg">
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
 
-
+            </form>
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">To-Do TASK MANAGER</a>
             </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
 
-        </form>
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand" href="index.html">ToDo TASK MANAGER</a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="bs-example-navbar-collapse-1">
+                    <li class="page-scroll">
+                        <a href="index.html" class="btn btn-primary btn-lg">Home</a>
+
+                    </li>
+                    <li class="page-scroll">
+                        <a href="features.html">Features</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="about%20it.html">About Us</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-left">
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right" id="bs-example-navbar-collapse-1">
-                <li class="page-scroll">
-                    <a href="index.html" class="btn btn-primary btn-lg">Home</a>
-
-                </li>
-                <li class="page-scroll">
-                    <a href="features.html">Features</a>
-                </li>
-                <li class="page-scroll">
-                    <a href="about%20it.html">About Us</a>
-                </li>
-
-            </ul>
+        <div>
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <div>
-    </div>
-    <!-- /.container-fluid -->
+        <!-- /.container-fluid -->
 
-</nav>
+    </nav>
 
 
-<main class="raw">
-    <!--WRAPPER-->
-    <div id="wrapper">
+    <main class="raw">
+        <!--WRAPPER-->
+        <div id="wrapper">
 
-        <!--SLIDE-IN ICONS-->
-        <div class="user-icon"></div>
-        <div class="pass-icon"></div>
-        <!--END SLIDE-IN ICONS pass-icon -->
+            <!--SLIDE-IN ICONS-->
+            <div class="user-icon"></div>
+            <div class="pass-icon"></div>
+            <!--END SLIDE-IN ICONS pass-icon -->
 
-        <!--LOGIN FORM-->
-        <form class="login-form" method="get" name="myform" onsubmit="return validate();">
-            <!--HEADER-->
-            <div class="header loginheader">
-                <!--TITLE-->
-                <h1>---: Login :---</h1>
-                <!--END TITLE-->
-                <!--DESCRIPTION--><span>Task Manager</span>
-                <!--END DESCRIPTION-->
-            </div>
-            <!--END HEADER-->
+            <!--LOGIN FORM-->
+            <form class="login-form" method="get" name="myform" onsubmit="return validate();">
+                <!--HEADER-->
+                <div class="header loginheader">
+                    <!--TITLE-->
+                    <h1>---: Login :---</h1>
+                    <!--END TITLE-->
+                    <!--DESCRIPTION--><span>Task Manager</span>
+                    <!--END DESCRIPTION-->
+                </div>
+                <!--END HEADER-->
 
-            <!--CONTENT-->
-            <div class="content">
-                <!--USERNAME-->
-                <input name="user" id="username" type="email" class="input username" placeholder="Email" required="required" onfocus="this.value=''" />
-                <!--END USERNAME-->
-                <!--PASSWORD-->
-                <input name="password" id="password" type="password" class="input password" required="required" placeholder="Password" onfocus="this.value=''" />
-                <!--END PASSWORD-->
-            </div>
-            <!--END CONTENT-->
+                <!--CONTENT-->
+                <div class="content">
+                    <!--USERNAME-->
+                    <input name="user" id="username" type="email" class="input username" placeholder="Email" required="required" onfocus="this.value=''" />
+                    <!--END USERNAME-->
+                    <!--PASSWORD-->
+                    <input name="password" id="password" type="password" class="input password" required="required" placeholder="Password" onfocus="this.value=''" />
+                    <!--END PASSWORD-->
+                </div>
+                <!--END CONTENT-->
 
-            <!--FOOTER-->
-            <div class="footer loginbutton">
-                <!--LOGIN BUTTON-->
-                <input type="submit" value="Login" id="submit" onclick="validate()" class="button" />
-                <!--END LOGIN BUTTON-->
-            </div>
-            <!--END FOOTER-->
+                <!--FOOTER-->
+                <div class="footer loginbutton">
+                    <!--LOGIN BUTTON-->
+                    <input type="submit" value="Login" id="submit" onclick="validate()" class="button" />
+                    <!--END LOGIN BUTTON-->
+                </div>
+                <!--END FOOTER-->
 
-        </form>
-        <!--END LOGIN FORM-->
+            </form>
+            <!--END LOGIN FORM-->
 
-    </div>
-    <div id="div1"></div>
-    <!--END WRAPPER-->
-</main>
+        </div>
+        <div id="div1"></div>
+        <!--END WRAPPER-->
+    </main>
 
-<!--<header>
+    <!--<header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 imagesize">
@@ -366,53 +366,53 @@
 
 
 
-<!-- footer -->
-<footer id="foot " class="text-center">
-    <div id="foot1" class="footer-above ">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col col-md-4">
-                    <address>BPIT</address>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>Around the Web</h3>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://www.facebook.com/?__req=s" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/collections/" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/pranshujaguri" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://in.linkedin.com/in/pranshu-jaguri-97357b72" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col col-md-4">
-                    <div id="map1" class="map">
+    <!-- footer -->
+    <footer id="foot " class="text-center">
+        <div id="foot1" class="footer-above ">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <address>BPIT</address>
                     </div>
-                    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-                    <script src="js/map.js" type="application/javascript"></script>
-                </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/?__req=s" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/collections/" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/pranshujaguri" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://in.linkedin.com/in/pranshu-jaguri-97357b72" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <div id="map1" class="map">
+                        </div>
+                        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+                        <script src="js/map.js" type="application/javascript"></script>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer-below">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    Copyright &copy; ToDo TASK MANAGER 2016
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; ToDo TASK MANAGER 2016
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</footer>
+    </footer>
 
 
 </body>
